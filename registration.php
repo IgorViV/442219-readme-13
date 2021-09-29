@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $file_ext = get_file_extension($file_type, $image_type);
         if ($file_ext) {
             $filename = uniqid() . $file_ext;
-            move_uploaded_file($tmp_name, 'uploads/' . $filename);
+            move_uploaded_file($tmp_name, 'uploads/avatars/' . $filename);
             $new_user['avatar-path'] = $filename;
         } else {
             $errors['avatar'] = 'Загрузите изображение в формате JPEG, PNG или GIF';

@@ -12,9 +12,8 @@ $current_user = get_user_by_id($link, $_SESSION['user_id']);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors = [];
-    $current_post = get_post_val('post-id');
+    $current_post = filter_input(INPUT_POST, 'post-id');
     $post = get_posts_by_index($link, $current_post);
-
     if (!$post) {
         show_error($layout_header, 'Запрошенная страница не найдена на сервере: ' . '404', 'readme: просмотр поста');
     }
@@ -44,3 +43,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 }
+// TODO Исправить контроллер добавления комментария

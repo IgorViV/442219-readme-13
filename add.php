@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'new_post' => $new_post,
         ]);
     } else {
-        switch ($type_current) {
+        switch ($type_current) { // TODO Рефакторинг: избавиться от дублирования функции
             case 'photo':
                 $new_post_bd = add_post_photo($link, $new_post['heading'], $new_post['photo-url'], 1);
                 break;

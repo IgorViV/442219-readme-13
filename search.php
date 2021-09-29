@@ -11,19 +11,21 @@ is_not_session();
 $current_user = get_user_by_id($link, $_SESSION['user_id']);
 $link_ref = $_SERVER['HTTP_REFERER'];
 
-$query = htmlspecialchars(trim($_GET['search'] ?? ''));
+$query = trim($_GET['search'] ?? '');
 $posts_search = [];
 
 if ($query) {
     $posts_search = get_posts_by_search($link, $query);
 }
 
-if ($posts_search) {
+if ($posts_search) { // TODO Количество лайков добавить в запросе get_posts_by_search
     foreach ($posts_search as $index => $post) {
         $post['likes'] = get_likes_by_posts($link, $post['id'])['count_likes'];
         $posts_search[$index] = $post;
     }
 }
+
+// TODO Добавить поиск по тегам
 
 $layout_header = include_template('main-header.php', [
     'current_user' => $current_user,

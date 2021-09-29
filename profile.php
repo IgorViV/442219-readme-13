@@ -35,7 +35,7 @@ $user_subscribe = get_subscribers_by_user($link, $user_id)['count_sub'];
 $user_publications = get_posting_by_user($link, $user_id)['count_posts'];
 
 $is_subscribe = !empty(get_id_subscriber_by_user($link, $user['id'], $current_user['id']));
-$comments = get_comments_post($link, $post['post_id']);
+$comments = get_comments_post($link, $user_posts['post_id']);
 
 $layout_content = include_template('profile-main.php', [
     'user' => $user,

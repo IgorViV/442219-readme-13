@@ -13,6 +13,7 @@
     </div>
 
     <header class="header">
+        <!-- TODO На странице начального входа добавить CSS класс-элемент page__header -->
         <div class="header__wrapper container">
             <div class="header__logo-wrapper">
                 <a class="header__logo-link" href="index.php">

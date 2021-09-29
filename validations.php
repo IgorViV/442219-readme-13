@@ -114,7 +114,7 @@ $rules = [
         return validate_length($value, 4, 50);
     },
     'password' => function($value) {
-        return validate_length($value, 5, 50);
+        return validate_length($value, 5, 50); // TODO Валидацию пароля сделать согласно ТЗ
     },
     'comment' => function($value) {
         $value = trim($value);
@@ -193,6 +193,7 @@ function validate_hashtags($value)
     }
     return null;
 }
+// TODO Доработать валидацию тегов по ТЗ
 
 /**
  * Проверяет корректность ссылки на фото

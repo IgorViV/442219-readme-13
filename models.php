@@ -17,7 +17,7 @@ function get_popular_posts_default($connect, $sort_post, $offset = 0, $limit_pos
             $sort = 'COUNT(likes.id)';
             break;
         case 'date':
-            //
+            // TODO Добавить выбор постов по дате
             break;
     }
 
@@ -31,6 +31,7 @@ function get_popular_posts_default($connect, $sort_post, $offset = 0, $limit_pos
     . "GROUP BY posts.id ORDER BY $sort DESC LIMIT $limit_posts OFFSET $offset;";
 
     return get_arr_from_mysql($connect, $sql);
+    // TODO Добавить выбор по типу контента, чтобы избавиться от get_posts_by_type?
 }
 
 /**

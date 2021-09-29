@@ -66,3 +66,4 @@ $layout_content = include_template('popular-main.php', [
 ]);
 
 show_layout($layout_header, $layout_content, 'readme: популярные записи');
+// TODO Унифицировать шаблон поста
