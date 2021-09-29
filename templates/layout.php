@@ -28,6 +28,7 @@
     </header>
     <?= $content; ?>
     <footer class="footer">
+        <!-- TODO Исправить стилизацию футыра: сделать прилипшим к низу -->
         <div class="footer__wrapper">
             <div class="footer__container container">
                 <div class="footer__site-info">
@@ -58,6 +59,7 @@
                     </p>
                 </div>
                 <div class="footer__my-info">
+                    <!-- TODO На стартовой странице скрыть меню footer__my-pages -->
                     <ul class="footer__my-pages">
                         <li class="footer__my-page footer__my-page--feed">
                             <a class="footer__page-link" href="feed.html">Моя лента</a>

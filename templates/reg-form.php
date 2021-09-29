@@ -52,8 +52,7 @@
                     </div>
                 </div>
                 </div>
-                <!-- TODO Исправить условие -->
-                <?php if ($errors) : ?>
+                <?php if (!empty($errors)) : ?>
                     <?= include_template('add-errors-block.php', ['errors'=> $errors, 'errors_heading' => $errors_heading]); ?>
                 <?php endif; ?>
             </div>
