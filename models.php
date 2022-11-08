@@ -145,6 +145,7 @@ function get_posts_by_user_type($connect, $author_id, $type_id)
 function get_posting_by_user($connect, $author_id)
 {
     $sql = "SELECT COUNT(posts.user_id) count_posts FROM posts WHERE posts.user_id = ?;";
+    echo 'Привет, Сергей';
 
     return db_execute_stmt_assoc($connect, $sql, [$author_id]);
 }
